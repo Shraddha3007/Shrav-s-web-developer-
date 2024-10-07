@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Table Example</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    /* Custom styling */
+    body {
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .custom-table {
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+    .inline-date {
+      white-space: nowrap; /* Prevent line breaks */
+
+    }
+    .date-box {
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 10px; /* Adjusted padding for space inside the border */
+  margin: 5px 10px; /* Margin for space between the boxes */
+  display: inline-block;
+}
+.barcode {
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+}
+.avj {
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+}
+
+/* Hallmark */
+.hall {
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+}
+.gold{
+    border: 1px solid grey;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  display: inline-block;
+}
+.Mgf {
+  color: red;
+  margin: 5px;
+}
+
+
+/* Date */
+.date {
+  border: 1px solid grey;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.brand {
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+}
+
+
+    .count {
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+}
+/* Custom TH styling */
+th {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Specify your desired font family */
+  font-size: 16px; /* Specify your desired font size */
+  text-align: center; /* Center align the text */
+}
+.container {
+  max-width: 1500px; /* Increase the max-width as needed */
+  margin: 0 auto; /* Center the container */
+}
+
+.har{
+    border: 1px solid grey;
+  border-radius: 10px;
+    padding: 5px;
+    margin-top: 5px;
+    text-align: center;
+}
+.ref{
+    border: 1px solid grey;
+  border-radius: 10px;
+    padding: 5px;
+    margin-top: 15px;
+    text-align: center;
+}
+.size{
+    border: 1px solid grey;
+  border-radius: 10px;
+    padding: 5px;
+    margin-top: 15px;
+    text-align: center;
+    margin-left: -15px;
+}
+th {
+    font-size: 18px; /* Increase font size */
+    width: auto; /* Allow the columns to expand as needed */
+    white-space: nowrap; /* Prevent text wrapping */
+    background-color: lightblue;
+    color:black;
+  }
+   .box {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px;
+  text-align: center;
+  margin-left: -20px;
+margin-top: -10px
+}
+.box1{
+    margin-left: -60px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 20px;
+  margin-top: 10px;
+  font-size: 15px;
+}
+.box2{
+    margin-left: -121px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 50px;
+  margin-top: 10px;
+  font-size: 15px;
+}
+.box3{
+    margin-left: -160px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 40px;
+  font-size: 15px;
+  margin-top: 10px;
+  text-align: center;
+}
+.box4{
+    margin-left: -200px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 70px;
+  margin-top: 10px;
+  font-size: 15px;
+}
+.box5{
+  margin-left: -230px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 30px;
+  margin-top: 10px;
+  font-size: 15px;
+}
+.box6{
+  margin-left: -300px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 60px;
+  margin-top: 10px;
+  font-size: 15px;
+}
+.box7{
+  margin-left: -340px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 30px;
+  margin-top: 10px;
+  font-size: 15px;
+}
+.box8{
+  margin-left: -420px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100px;
+  margin-top: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+.box9{
+  margin-left: -420px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 80px;
+  margin-top: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+.box10{
+  margin-left: -440px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 90px;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 15px;
+}
+.box11{
+  margin-left: -410px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 70px;
+  margin-top: 10px;
+  font-size: 15px;
+}
+.box12{
+  margin-left: -430px;
+  text-align: center;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 70px;
+  margin-top: 10px;
+  font-size: 15px;
+}
+.box13{
+  margin-left: -470px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 90px;
+  margin-top: 10px;
+  font-size: 13px;
+  text-align: center;
+}
+.box14{
+  margin-left: -450px;
+  text-align: center;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 70px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.box15{
+  margin-left: -430px;
+  text-align: center;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 80px;
+  margin-top: 10px;
+  font-size: 15px;
+}
+.box16{
+  margin-left: -370px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 60px;
+  margin-top: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+.box17{
+  margin-left: -310px;
+    border: 1px solid #ccc;
+    text-align: center;
+  border-radius: 8px;
+  width: 100px;
+  margin-top: 10px;
+  font-size: 15px;
+}
+.box18{
+  margin-left: -230px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 70px;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 15px;
+}
+.box19{
+  margin-left: -170px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 70px;
+  margin-top: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+.Har{
+  border: 1px solid grey;
+  border-radius: 10px;
+    padding: 5px;
+    margin-top: -5px;
+    text-align: center;
+}
+.size1{
+  margin-left: -70px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 60px;
+  margin-top: -5px;
+  font-size: 15px;
+  text-align:center ;
+
+}
+.size2{
+  margin-left: -100px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 60px;
+  margin-top: -5px;
+  font-size: 15px;
+  text-align: center;
+}
+.size3{
+  margin-left: -140px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 130px;
+  margin-top: -5px;
+  font-size: 15px;
+  text-align: center;
+}
+.size4{
+  margin-left: -90px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 40px;
+  margin-top: -5px;
+  font-size: 15px;
+  text-align: center;
+}
+.size5{
+  margin-left: -150px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 30px;
+  margin-top: -5px;
+  font-size: 15px;
+  text-align: center;
+}
+.size6{
+  margin-left: -220px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 50px;
+  margin-top: -5px;
+  font-size: 15px;
+  text-align: center;
+}
+.size7{
+  margin-left: -270px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 90px;
+  margin-top: -5px;
+  font-size: 15px;
+  text-align: center;
+}
+.size8{
+  margin-left: -290px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 80px;
+  margin-top: -5px;
+  font-size: 15px;
+  text-align: center;
+}
+.size9{
+  margin-left: -310px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 80px;
+  margin-top: -5px;
+  font-size: 15px;
+  text-align: center;
+}
+.size10{
+  margin-left: -330px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 80px;
+  margin-top: -5px;
+  font-size: 15px;
+  text-align: center;
+}
+.size11{
+  margin-left: -310px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 30px;
+  margin-top: -5px;
+  font-size: 15px;
+  text-align: center;
+}
+.size12{
+  margin-left: -370px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 130px;
+  margin-top: -5px;
+  font-size: 15px;
+  text-align: center;
+}
+.size13{
+  margin-left: -350px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 70px;
+  margin-top: -5px;
+  font-size: 15px;
+  text-align: center;
+}
+.size14{
+  margin-left: -360px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 70px;
+  margin-top: -5px;
+  font-size: 15px;
+  text-align: center;
+}
+.size15{
+  margin-left: -350px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 70px;
+  margin-top: -5px;
+  font-size: 15px;
+  text-align: center;
+}
+.size16{
+  margin-left: -280px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100px;
+  margin-top: -5px;
+  font-size: 15px;
+  text-align: center;
+}
+.size17{
+  margin-left: -200px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 70px;
+  margin-top: -5px;
+  font-size: 15px;
+  text-align: center;
+}
+.size18{
+  margin-left: -150px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 80px;
+  margin-top: -5px;
+  font-size: 15px;
+  text-align: center;
+}
+.ref{
+  border: 1px solid grey;
+  border-radius: 10px;
+    padding: 5px;
+    margin-top: -5px;
+    text-align: center;
+}
+.ref1{
+  margin-left: -80px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 140px;
+  margin-top: -5px;
+  font-size: 15px;
+  text-align: center;
+}
+.ref2{
+  margin-left: -35px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100px;
+  margin-top: -5px;
+  font-size: 15px;
+  text-align: center;
+}
+.ref3{
+  margin-left: -35px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100px;
+  margin-top: -5px;
+  font-size: 15px;
+  text-align: center;
+}
+.ref4{
+  margin-left: -20px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100px;
+  margin-top: -5px;
+  font-size: 15px;
+  text-align: center;
+}
+.ref5{
+  margin-left: -20px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100px;
+  margin-top: -5px;
+  font-size: 15px;
+  text-align: center;
+}
+.ref6{
+  margin-left: -20px;
+    border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100px;
+  margin-top: -5px;
+  font-size: 15px;
+  text-align: center;
+}
+.ref7{
+  margin-left: -20px;
+  width: 100px;
+  margin-top: -5px;
+  font-size: 20px;
+  text-align: center;
+  color: gold;
+}
+.container1 th{
+  background-color: gold;
+  color: red;
+}
+.check{
+  margin-left: -20px;
+}
+.ref8{
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: -5px;
+  text-align: center;
+  margin-left: -70px;
+}
+.ref9{
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: -5px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .custom-table {
+    overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
+  }
+
+  th {
+    font-size: 14px; /* Decrease font size for smaller screens */
+  }
+
+  /* Adjust the margin and padding for smaller screens */
+  .date-box,
+  .barcode,
+  .avj,
+  .hall,
+  .gold,
+  .Mgf,
+  .date,
+  .brand,
+  .count {
+    margin: 3px;
+    padding: 8px;
+  }
+}
+</style>
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="table-responsive">
+          <table class="table table-striped custom-table">
+            <thead>
+              <tr>
+                <th scope="col">Bill Date</th>
+                <th scope="col">Firm</th>
+                <th scope="col">Metal/Rate</th>
+                <th scope="col">Product Code</th>
+                <th scope="col">Brand/Seller Name</th>
+                <th scope="col">Counter Name</th>
+                <th scope="col">BIS</th>
+                <th scope="col">images/Photos </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                    <div class="date-box">18</div>
+                    <div class="date-box">FEB</div>
+                    <div class="date-box">2024</div>
+                    <div class="barcode">Barcode Content</div>
+                  </td>
+                <td>
+                    <div class="avj">AVJ</div>
+                    <div class="hall">Hallmark UID  </div>
+                </td>
+                <td>
+                    <div class="gold">Gold</div>
+                    <div class="gold">6500</div>
+                    <div class="Mgf">MGF DATE</div>
+                    <div class="date">18</div>
+                    <div class="date">FEB</div>
+                    <div class="date">2024</div>
+                </td>
+                <td>
+                    <div class="gold">har</div>
+                    <div class="gold">3</div>
+                </td>
+                <td>
+                    <div class="brand">BRAND/SELLER NAME</div>
+                </td>
+                <td>
+                    <div class="count">COUNTER NAME</div>
+                </td>
+                    <td>
+                        <input type="checkbox">
+                      </td>
+                <td>
+                    <img>
+                </td>
+              </tr>
+              <!-- Add more rows as needed -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container1">
+    <div class="row">
+      <div class="col">
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">CATEGORY/NAME</th>
+                <th scope="col">QTY</th>
+                <th scope="col">WEIGHT</th>
+                <th scope="col">LESS WT</th>
+                <th scope="col">NT WT</th>
+                <th scope="col">TAG WT</th>
+                <th scope="col">FN WT</th>
+                <th scope="col">FFN WT</th>
+                <th scope="col">LAB CHGS</th>
+                <th scope="col">TOTAL</th>
+                <th scope="col">CGST %</th>
+                <th scope="col">AMT</th>
+                <th scope="col">SGST%</th>
+                <th scope="col" class="col1">AMT</th>
+                <th scope="col">IGST%</th>
+                <th scope="col">AMT</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr >
+                <td >
+                    <div class="har">HARAM SET</div>
+                    <td > 
+                    <td> <div class="box1">1</div></td>
+                    <td><div class="box2">GS|WT </div></td>
+                    <td><div class="box3">GM </div></td>
+                    <td><div class="box4">PKT WT </div></td>
+                    <td><div class="box5">GM </div></td>
+                    <td><div class="box6">NT WT </div></td>
+                    <td><div class="box7">GM </div></td>
+                    <td><div class="box8">TAG WT </div></td>
+                    <td><div class="box9">9.160 </div></td>
+                    <td><div class="box10">10.840 </div></td>
+                    <td><div class="box11">LAB CH </div></td>
+                    <td><div class="box12">GM </div></td>
+                    <td><div class="box13">TOT LAB CH </div></td>
+                    <td><div class="box14">0 </div></td>
+                    <td><div class="box15">0.00 </div></td>
+                    <td><div class="box16">0 </div></td>
+                    <td><div class="box17">0.00 </div>
+                      <td><div class="box18">0 </div></td>
+                      <td><div class="box19">0.00 </div></td>
+                  </td>
+              </tr>
+              
+                <td>
+                    <div class="Har">HAR</div>
+                    <td  > 
+                    <td> <div class="size1">SIZE</div></td>
+                    <td><div class="size2">PASS </div></td>
+                    <td><div class="size3">OTHER INFO </div></td>
+                    <td><div class="size4">91.6 </div></td>
+                    <td><div class="size5">0 </div></td>
+                    <td><div class="size6">91.60 </div></td>
+                    <td><div class="size7">8.40 </div></td>
+                    <td><div class="size8">C.W WT</div></td>
+                    <td><div class="size9">VAL ADD</div></td>
+                    <td><div class="size10">MKG CH</div></td>
+                    <td><div class="size11">PP</div></td>
+                    <td><div class="size12">VALUATION</div></td>
+                    <td><div class="size13">0 </div></td>
+                    <td><div class="size14">0.00 </div></td>
+                    <td><div class="size15">0 </div></td>
+                    <td><div class="size16">0.00 </div>
+                      <td><div class="size17">0 </div></td>
+                      <td><div class="size18">0.00 </div>
+                  </td>
+
+              
+            </tbody>
+            <tr>
+              <td>
+                  <div class="ref">RFID NO.</div>
+                  <td  > 
+                  <td> <div class="ref1">LOCATION</div></td>
+                  <td> <div class="ref2">MODEL NO. </div></td>
+                  <td> <div class="ref3">COLOR </div></td>
+                  <td> <div class="ref4">TOT HMC </div></td>
+                  <td> <div class="ref5">OTH CH  </div></td>
+                  <td> <div class="ref5">GM  </div></td>
+                  <td> <div class="ref6">TOT OTH CH   </div></td>
+                  <td> <div class="ref7">DETAILS </div></td>
+                  <td> <div class="ref7">STONE </div></td>
+                  <td> <input type="checkbox" class="check"></td>
+                  <td><div class="ref8">0.00 </div></td>
+                  <td><div class="ref9">FINAL BALUATION</div></td>
+                  <td> <input type="checkbox" class="check"></td>
+                </td>
+            </tr>
+          </table>
+          <div style="text-align: center;">
+            <button type="button" class="btn btn-primary" style="padding: 10px 20px;">EXISTING ITEM </button>
+            <button type="button" class="btn btn-success"style="padding: 10px 20px;">ADD STOCK</button>
+            <button type="button"  class="btn btn-warning" style="padding: 10px 20px;">PURCHASE ON CASH</button>
+            <button type="button"  class="btn btn-info" style="padding: 10px 20px;">HALLMARKING </button>
+            <button type="button" class="btn btn-dark" style="padding: 10px 20px;">HELP</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
